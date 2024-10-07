@@ -1,12 +1,19 @@
-// Functionality to toggle the visibility of additional information
-document.getElementById('toggle-details').addEventListener('click', function() {
-    const moreInfoSection = document.getElementById('more-info');
-    
-    if (moreInfoSection.classList.contains('hidden')) {
-        moreInfoSection.classList.remove('hidden');
-        this.textContent = 'Hide More Info';
-    } else {
-        moreInfoSection.classList.add('hidden');
-        this.textContent = 'Show More Info';
-    }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Add class to header for animation effect
+    const headerTitle = document.querySelector(".title");
+    headerTitle.classList.add("slide-in");
+
+    // Smooth scrolling for navbar links
+    const links = document.querySelectorAll("a[href^='#']");
+    links.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            window.scrollTo({
+                top: target.offsetTop - 50,
+                behavior: "smooth"
+            });
+        });
+    });
 });
