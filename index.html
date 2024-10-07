@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuzzing Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fuzzing Challenge: Sumatra PDF Reader</h1>
+    </header>
+    
+    <section class="content">
+        <h2>What is Fuzzing?</h2>
+        <p>Fuzzing is an automated process of identifying software vulnerabilities by supplying unexpected and faulty inputs to the software.</p>
+        
+        <h3>Steps in Fuzzing Process:</h3>
+        <ol>
+            <li><strong>Identification of Target Function(s):</strong> Target functions are entry points for processing input data.</li>
+            <li><strong>Developing Harness:</strong> Harnesses are code stubs that invoke the target function with mutated inputs.</li>
+            <li><strong>Fuzzing:</strong> A fuzzer generates inputs, checks if the application crashes, and stores inputs and memory states for analysis.</li>
+        </ol>
+        
+        <h3>Description of the Challenge:</h3>
+        <p>The teams are required to develop a working harness for fuzzing the latest version (3.5.2 or later) of the Windows Sumatra PDF Reader. The harness should fuzz the software using a fuzzer such as WinAFL.</p>
+        
+        <h3>Evaluation Criteria:</h3>
+        <ul>
+            <li>Target functions identified</li>
+            <li>Live demonstration of the harness</li>
+            <li>Code coverage achieved</li>
+            <li>Technical report submission</li>
+        </ul>
+    </section>
+
+    <button id="toggle-details">Toggle More Info</button>
+    <section id="more-info" class="hidden">
+        <h3>Expected Solution:</h3>
+        <p>
+            The team must provide a fuzzing harness capable of fuzzing the Sumatra PDF Reader software version 3.5.2 or later. 
+            The harness must identify target functions and supply appropriate arguments. The fuzzer should be able to generate
+            numerous inputs and store crash information for further analysis.
+        </p>
+
+        <h4>Technical Report Should Include:</h4>
+        <ul>
+            <li>Reversing steps undertaken</li>
+            <li>Target functions identified</li>
+            <li>Dependencies identified</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Designed for the Sumatra PDF Fuzzing Challenge</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
